@@ -35,9 +35,7 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<div class="featured-work-list-item">
 						<?php if ( get_field( 'image_1') ) : ?>
-							<image>
-								<?php echo wp_get_attachment_image( get_field('image_1'), 'medium' ); ?>
-							</image>
+							<?php echo wp_get_attachment_image( get_field('image_1'), 'medium' ); ?>
 						<?php endif; ?>
 						<h5 class="centered-text"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 					</div>
