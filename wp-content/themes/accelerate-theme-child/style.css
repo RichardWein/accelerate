@@ -51,49 +51,31 @@ a, a:link, a:hover {
 	font-weight: bold;
 }
 
-
-/* Case Studies Single Page*/
+/* Case Studies */
 
 .case-study-title {
 	font-size: 140%;
 	font-weight: bold;
 	margin-bottom: 10px;
 }
-
 .case-study-services {
 	font-size: 75%;
 	color: #a6acaf;
 	margin-bottom: 10px;
 }
-
 .case-study-client {
 	font-size: 85%;
 }
-
 .case-study-description {
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
-
 .case-study-url {
 	font-weight: bold;
 }
-
 .case-study-image {
 	margin-bottom: 20px;
 }
-
-/* .case-study-column-1 {
-    width: 30%;
-    float: left;
-    margin: 55px 0;
-	padding-top: 25px;
-}
-.case-study-column-2 {
-	width: 65%;
-	float: right;
-	margin: 55px 0;
-} */
 .single-case-study {
 	margin-top: 50px;
 	width: 960px;
@@ -105,4 +87,35 @@ a, a:link, a:hover {
 	padding-right: 50px;
 }
 .case-study-column-2 {
+}
+
+/* Contact Page */
+
+.page-id-47342 .site-content {
+	width: 50%;
+}
+
+nf-field:nth-child(1) {
+	float: left;
+	width: 48%;
+}
+nf-field:nth-child(2) {
+	float: right;
+	width: 48%;
+}
+nf-field:nth-child(4) {
+	float: right;
+}
+.nf-field-label label {
+	font-size: smaller;
+    font-weight: normal !important;
+}
+#nf-field-4 {
+    background: none repeat scroll 0 0 #45ac9d;
+    color: white;
+    font-family: "montserrat";
+    font-size: 16px;
+    font-weight: bold;
+    padding: 16px 60px;
+    text-align: center;
 }
