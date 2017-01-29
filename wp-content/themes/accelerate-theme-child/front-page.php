@@ -28,7 +28,7 @@ get_header(); ?>
 			// New Query
 			query_posts( 'posts_per_page=3&post_type=case_studies' );
 			?>
-			<h2 class="centered-text">FEATURED WORK</h2>
+			<h2 class="centered-text">Featured Work</h2>
 			<br>
 			<div class="featured-work-list">
 			<?php if ( have_posts() ) : ?>
@@ -52,7 +52,7 @@ get_header(); ?>
 			// New Query
 			query_posts( 'posts_per_page=1' );
 			?>
-			<h2>FROM THE BLOG</h2>
+			<h2>From the Blog</h2>
 			<br>
 			<?php
 			if ( have_posts() ) :

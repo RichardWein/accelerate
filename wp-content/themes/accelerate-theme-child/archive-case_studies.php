@@ -16,7 +16,7 @@ get_header(); ?>
 <div id="primary" class="site-content">
 	<div id="content" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
-			<div class="single-case-study">
+			<div class="one-case-study">
 				<div class="case-study-column-1">
 					<div class="case-study-title"><?php the_title(); ?></div>
 					<div class="case-study-services"><?php the_field('services'); ?></div>

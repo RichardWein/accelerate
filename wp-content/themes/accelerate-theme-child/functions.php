@@ -37,7 +37,28 @@
             'rewrite' => array( 'slug' => 'case-studies' ),
         )
     );
+
+    register_post_type( 'services',
+        array(
+            'labels' => array(
+                'name' => __( 'Services' ),
+                'singular_name' => __( 'Service' )
+            ),
+            'public' => true,
+            'has_archive' => false,
+        )
+    );
 }
 add_action( 'init', 'create_custom_post_types' );
 
+//Add Page Slug Body Classes
+function add_slug_body_class( $classes ) {
+	global $post;
+	
+	if ( isset( $post ) ) {
+		$classes[] = $post->post_type . '-' . $post->post_name;
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'add_slug_body_class' );
 ?>

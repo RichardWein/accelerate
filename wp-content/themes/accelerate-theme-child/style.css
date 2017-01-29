@@ -15,11 +15,13 @@
 div {
 	display: block;
 }
+h2 {
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
 .centered-text {
 	text-align: center;
-}
-.home-page {
-    background: url("img/taxi-photo.jpg") no-repeat scroll left center / cover rgba(0, 0, 0, 0);
 }
 #masthead {
     background: none repeat scroll 0 0 #45ac9d;
@@ -29,13 +31,6 @@ div {
 }
 a, a:link, a:hover {
 	color: #45ac9d;
-}
-.featured-work-list {
-    display: flex;
-	align-items: flex-end;
-}
-.featured-work-list-item {
-	margin-right: 20px;
 }
 
 /* Top Menu */
@@ -51,8 +46,27 @@ a, a:link, a:hover {
 	font-weight: bold;
 }
 
-/* Case Studies */
+/* HOME PAGE */
 
+.home-page {
+    background: url("img/taxi-photo.jpg") no-repeat scroll left bottom / cover rgba(0, 0, 0, 0);
+}
+.featured-work-list {
+    display: flex;
+	align-items: flex-end;
+}
+.featured-work-list-item {
+	margin-right: 20px;
+}
+
+/* CASE STUDIES (Work page, archive and single page) */
+
+.one-case-study {
+	margin-top: 50px;
+	width: 960px;
+	display: flex;
+	justify-content: space-between;
+}
 .case-study-title {
 	font-size: 140%;
 	font-weight: bold;
@@ -76,12 +90,6 @@ a, a:link, a:hover {
 .case-study-image {
 	margin-bottom: 20px;
 }
-.single-case-study {
-	margin-top: 50px;
-	width: 960px;
-	display: flex;
-	justify-content: space-between;
-}
 .case-study-column-1 {
 	padding-top: 25px;
 	padding-right: 50px;
@@ -89,12 +97,60 @@ a, a:link, a:hover {
 .case-study-column-2 {
 }
 
-/* Contact Page */
+/* SERVICES PAGE */
 
-.page-id-47342 .site-content {
+.about-page-top-image {
+    background: url("img/taxi-photo.jpg") no-repeat scroll left bottom / cover rgba(0, 0, 0, 0);
+    height: 350px;
+}
+.about-page-overlay-text {
+	color: white;
+	font-size: 140%;
+	text-align: center;
+	width: 650px;
+	margin: 0 auto;
+	padding-top: 90px;
+}
+.services-intro {
+	margin-top: 60px;
+	text-align: center;
+}
+.one-service {
+	margin-top: 50px;
+	width: 960px;
+	display: flex;
+	justify-content: space-between;
+}
+.one-service:nth-child(odd)  {
+	flex-direction: row-reverse;
+}
+.service-symbol, .service-text {
+	padding:10px 15px 15px;
+}
+.service-text-title {
+	font-size: 140%;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.service-text-description {
+}
+.about-page-bottom {
+	margin-top: 70px;
+	padding-top: 50px;
+	border-top: 1px dotted #e3e1e1;
+	text-align: center;
+	padding-bottom: 10px;
+}
+.about-page-bottom > span {
+	font-size: 140%;
+	font-weight: bold;
+	margin-right: 50px;
+}
+/* CONTACT PAGE */
+
+.page-contact .site-content {
 	width: 50%;
 }
-
 nf-field:nth-child(1) {
 	float: left;
 	width: 48%;
