@@ -1,17 +1,17 @@
 /*
  Theme Name:   Accelerate Theme Child
- Theme URI:    http://example.com/accelerate-theme-child/
  Description:  Child theme of Accelerate, for Skillcrush exercise 203
  Author:       Richard Wein
- Author URI:   http://example.com
+ Author URI:   http://richardwein.com
  Template:     accelerate-theme
- Version:      1.0.0
+ Version:      1.0.2
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  accelerate-theme-child
 */
 
 @import url("../accelerate-theme/style.css");
 
+/* Add some reset code to make all elements use 'box-sizing: border-box' by default */
 html {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -19,7 +19,6 @@ html {
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
-
 *,
 *:before,
 *:after {
@@ -27,26 +26,26 @@ html {
 	-moz-box-sizing: inherit;
 	box-sizing: inherit;
 }
-
+/* Make a couple of corrections because the parent theme wasn't designed to work with 'box-sizing: border-box' */
 .main-content {
     width: 69%;
 }
-
 #masthead {
     height: 50px;
 }
 
-/* div {
-	display: block;
-} */
+/* Modified h2 appearance */
 h2 {
 	font-size: 20px;
 	font-weight: bold;
 	text-transform: uppercase;
 }
+/* I created a class so I could centre text in PHP. */
+/* Probably not a good idea, and might not use again */
 .centered-text {
 	text-align: center;
 }
+/* Client's required changes to colours */
 #masthead {
     background: none repeat scroll 0 0 #45ac9d;
 }
