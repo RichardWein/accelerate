@@ -25,20 +25,23 @@ get_header(); ?>
 		<h2><?php the_field('intro_title'); ?></h2>
 		<?php the_field('intro_text'); ?>
 	</div>
-	<?php query_posts( array( 'post_type' => 'services', 'orderby' => 'date', 'order' => 'ASC' ) ); ?>
-	<?php while ( have_posts() ) : the_post(); ?>
-		<div class="one-service">
-			<div class="service-symbol">
-				<?php if( get_field('service_symbol') ) : ?>
-					<?php echo wp_get_attachment_image( get_field('service_symbol'), 'full' ); ?>
-				<?php endif; ?>
+	
+	<div class="services-list">
+		<?php query_posts( array( 'post_type' => 'services', 'orderby' => 'date', 'order' => 'ASC' ) ); ?>
+		<?php while ( have_posts() ) : the_post(); ?>
+			<div class="one-service">
+				<div class="service-symbol">
+					<?php if( get_field('service_symbol') ) : ?>
+						<?php echo wp_get_attachment_image( get_field('service_symbol'), 'full' ); ?>
+					<?php endif; ?>
+				</div>
+				<div class="service-text">
+					<div class="service-text-title"><?php the_title(); ?></div>
+					<div class="service-text-description"><?php the_content(); ?></div>
+				</div>
 			</div>
-			<div class="service-text">
-				<div class="service-text-title"><?php the_title(); ?></div>
-				<div class="service-text-description"><?php the_content(); ?></div>
-			</div>
-		</div>
-	<?php endwhile; ?>
+		<?php endwhile; ?>
+	</div>
 				
 	<?php wp_reset_query(); ?>
 	<div class="about-page-bottom">

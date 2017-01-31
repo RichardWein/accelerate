@@ -12,9 +12,33 @@
 
 @import url("../accelerate-theme/style.css");
 
-div {
-	display: block;
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
 }
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+.main-content {
+    width: 69%;
+}
+
+#masthead {
+    height: 50px;
+}
+
+/* div {
+	display: block;
+} */
 h2 {
 	font-size: 20px;
 	font-weight: bold;
@@ -33,7 +57,7 @@ a, a:link, a:hover {
 	color: #45ac9d;
 }
 
-/* Top Menu */
+/* TOP MENU */
 
 #menu-top-nav .menu-item {
 	display: inline;
@@ -121,7 +145,7 @@ a, a:link, a:hover {
 	display: flex;
 	justify-content: space-between;
 }
-.one-service:nth-child(odd)  {
+.one-service:nth-child(even)  {
 	flex-direction: row-reverse;
 }
 .service-symbol, .service-text {
