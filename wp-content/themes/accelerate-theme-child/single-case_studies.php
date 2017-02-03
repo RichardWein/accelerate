@@ -24,7 +24,7 @@ get_header(); ?>
 						<?php endif; ?>
 						<div class="case-study-description"><?php the_content(); ?></div>
 						<?php if( get_field('url') ) : ?>
-							<div class="case-study-url"><a href="https://<?php the_field('url') ?>">Visit Live Site</a></div>
+							<div class="case-study-url"><a href="http://<?php the_field('url') ?>">Visit Live Site</a></div>
 						<?php endif; ?>
 					</div>
 

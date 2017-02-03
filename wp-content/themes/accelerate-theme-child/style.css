@@ -79,6 +79,14 @@ a, a:link, a:hover {
 	font-weight: bold;
 }
 
+/* SIDEBAR */
+
+/* MailChimp newsletter sign up */
+#mc4wp-form-1 input.button {
+	width: 100%;
+	padding: 0;
+}
+
 /* HOME PAGE */
 
 .home-page {
