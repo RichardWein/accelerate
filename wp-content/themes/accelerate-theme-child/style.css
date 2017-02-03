@@ -49,11 +49,21 @@ h2 {
 #masthead {
     background: none repeat scroll 0 0 #45ac9d;
 }
-.button {
-    background: none repeat scroll 0 0 #45ac9d;
-}
 a, a:link, a:hover {
 	color: #45ac9d;
+}
+/* Apply button styles to buttons from plugins, as well as our own .button class */
+.button, [type="button"] {
+	background: none repeat scroll 0 0 #45ac9d;
+    color: white;
+    font-family: "montserrat";
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+/* Add some space between sidebar widgets */
+#primary-sidebar > .widget {
+	margin-bottom: 50px;
 }
 
 /* TOP MENU */
@@ -73,6 +83,7 @@ a, a:link, a:hover {
 
 .home-page {
     background: url("img/taxi-photo.jpg") no-repeat scroll left bottom / cover rgba(0, 0, 0, 0);
+	height: 640px;
 }
 .featured-work-list {
     display: flex;
@@ -80,6 +91,63 @@ a, a:link, a:hover {
 }
 .featured-work-list-item {
 	margin-right: 20px;
+}
+body.home .blog-plus-tweet {
+	margin-top: 50px;
+	width: 100%;
+	display: flex;
+    column-gap: 40px;
+}
+body.home .blog {
+	flex: 1;
+	margin-right: 50px;
+}
+body.home .tweet {
+	flex: 1;
+	margin-left: 50px;
+}
+body.home .blog .entry-title {
+	font-weight: bold;
+	font-size: 20px;
+	text-transform: none;
+}
+body.home .blog .post-entry {
+    border-bottom: 0;
+	padding-bottom: 0;
+}
+body.home .tweet .widget-title {
+	display: none;
+}
+body.home .tweet .widget {
+	padding: 0;
+}
+body.home .tweets {
+	list-style: none;
+	margin: 0;
+}
+body.home .tweets > li {
+	font-weight: normal;
+	font-family: inherit;
+	line-height: inherit;
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+body.home .accelerate-heading {
+	display: block;
+	font-weight: bold;
+	font-size: 20px;
+    font-family: "montserrat";
+}
+body.home .tweets > li a:link,
+body.home .tweets > li a:hover,
+body.home .tweets > li .stt-em a {
+	color: #45ac9d;
+    text-decoration: none;
+}
+.more-link {
+	color: #45ac9d;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 /* CASE STUDIES (Work page, archive and single page) */
@@ -124,7 +192,7 @@ a, a:link, a:hover {
 
 .about-page-top-image {
     background: url("img/taxi-photo.jpg") no-repeat scroll left bottom / cover rgba(0, 0, 0, 0);
-    height: 350px;
+    height: 550px;
 }
 .about-page-overlay-text {
 	color: white;
@@ -132,7 +200,7 @@ a, a:link, a:hover {
 	text-align: center;
 	width: 650px;
 	margin: 0 auto;
-	padding-top: 90px;
+	padding-top: 190px;
 }
 .services-intro {
 	margin-top: 60px;
@@ -190,11 +258,5 @@ nf-field:nth-child(4) {
     font-weight: normal !important;
 }
 #nf-field-4 {
-    background: none repeat scroll 0 0 #45ac9d;
-    color: white;
-    font-family: "montserrat";
-    font-size: 16px;
-    font-weight: bold;
     padding: 16px 60px;
-    text-align: center;
 }

@@ -61,4 +61,18 @@ function add_slug_body_class( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'add_slug_body_class' );
+
+function accelerate_theme_child_widget_init() {
+	register_sidebar( array(
+	    'name' =>__( 'Homepage sidebar', 'accelerate-theme-child'),
+	    'id' => 'sidebar-2',
+	    'description' => __( 'Appears on the static front page template', 'accelerate-theme-child' ),
+	    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	    'after_widget' => '</aside>',
+	    'before_title' => '<h3 class="widget-title">',
+	    'after_title' => '</h3>',
+	) );
+	
+}
+add_action( 'widgets_init', 'accelerate_theme_child_widget_init' );
 ?>
