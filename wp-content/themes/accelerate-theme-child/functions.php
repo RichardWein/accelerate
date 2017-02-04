@@ -25,6 +25,14 @@
  * @since Accelerate Marketing 1.0
  */
  
+function enqueue_some_fonts() {
+	$query_args = array(
+		'family' => 'Open+Sans|Montserrat',
+	);
+	wp_register_style( 'accelerate_google_fonts', add_query_arg( $query_args, "//fonts.googleapis.com/css" ), array(), null );
+}
+add_action('wp_enqueue_scripts', 'enqueue_some_fonts');
+
  function create_custom_post_types() {
     register_post_type( 'case_studies',
         array(
